@@ -1,0 +1,35 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lâmpada Interativa</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Lâmpada Interativa</h1>
+
+  <div class="lampada"></div>
+
+  <label class="switch">
+    <input type="checkbox" id="toggle">
+    <span class="slider"></span>
+  </label>
+  <p id="status">Apagada</p>
+
+  <script>
+    const toggle = document.getElementById("toggle");
+    const lampada = document.querySelector(".lampada");
+    const statusTexto = document.getElementById("status");
+
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        lampada.classList.add("acessa");
+        statusTexto.textContent = "Acesa";
+      } else {
+        lampada.classList.remove("acessa");
+        statusTexto.textContent = "Apagada";
+      }
+    });
+  </script>
+</body>
+</html>
