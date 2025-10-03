@@ -1,8 +1,8 @@
 let clientWeb = null;
 
 const clientId = "ESP8266" + Math.floor(Math.random() * 900) + 100;
-
-clientWeb = new Paho.MQTT.Client("broker.hivemq.com", 8884, clientId);
+clientWeb = new Paho.MQTT.Client("broker.hivemq.io", 8884, clientId);
+//clientWeb = new Paho.MQTT.Client("broker.hivemq.com", 8884, clientId); 
 
 clientWeb.connect({
     useSSL: true,
